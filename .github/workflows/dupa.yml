@@ -3,4 +3,8 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-      - run: echo dupa
+      - name: print
+        run: |
+          echo dupa
+          pwd
+          ls -la
