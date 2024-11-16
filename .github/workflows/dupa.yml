@@ -3,8 +3,14 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-      - name: print
+      - name: print_before_checkout
         run: |
-          echo dupa
+          echo before
+          pwd
+          ls -la
+      - uses: actions/checkout@v4
+      - name: print_after_checkout
+        run: |
+          echo after
           pwd
           ls -la
